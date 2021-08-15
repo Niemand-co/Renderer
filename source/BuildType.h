@@ -1,0 +1,19 @@
+#pragma once
+
+#define RENGINE_BUILD_UNKNOWN    "unknown"
+#define RENGINE_BUILD_DEBUG      "debug"
+#define RENGINE_BUILD_RELEASE    "release"
+
+#ifdef RDEBUG
+#define BUILD_TYPE RENGINE_BUILD_DEBUG
+#define RENGINE_DEBUG
+
+#elif RRELEASE
+#define BUILD_TYPE RENGINE_BUILD_RELEASE
+#define RENGINE_RELEASE
+
+#else
+#define BUILD_TYPE RENGINE_BUILD_UNKNOWN
+#define RENGINE_UNKNOWN
+
+#endif
