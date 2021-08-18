@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.10)
 #set the project name
 project(REngine)
 
+include(CTest)
+add_subdirectory(Tests)
+
 set(CMAKE_BUILD_TYPE "Debug")
 
 include_directories("${PROJECT_SOURCE_DIR}/CMake")
